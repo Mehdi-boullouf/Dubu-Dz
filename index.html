@@ -1,0 +1,185 @@
+<HTML!DOCTYPE>
+<head><title>Mehdi Boullouf</title></head>
+<body><body bgcolor="Black"><body text="White"><font size="5"><font face"Symbol">
+<script language="JavaScript">
+var sizes = new Array("0px", "1px", "2px", "3px", "4px");
+sizes.pos = 0;
+function elast() {
+var el = document.all.elastic;
+if (null == el.direction)
+   el.direction = 1;
+else if ((sizes.pos > sizes.length - 4) || (0 == sizes.pos))
+   el.direction *= -1;
+   el.style.letterSpacing = sizes[sizes.pos += el.direction];
+}
+setInterval('elast()', 100)
+</script>
+</HEAD>
+<BODY>
+<h1 align="center" id="elastic"><font size="6" >Welcome To DerBu Dz</font></hi>
+</BODY>
+<div align=center>
+<table style="border-style: dashed; border-width: 3px; border-collapse: collapse; height: 438px;" id="table1" width="64%" border="1" bordercolor="#666666">
+		<tbody><tr>
+			<td style="border-style: none; border-width: medium;" nowrap="nowrap">
+			<div align="center">
+				<div class="hedr"> 
+
+
+
+ <table align="center" width="98%"><tbody><tr><td>
+<div align=center>
+    <img src="Algeria.gif">
+
+
+<div align=center>
+<h1>By Mehdi Boullouf<H1>
+<script type="text/javascript">
+var snowmax=30
+var snowcolor=new Array("white","yellow","red","aqua")
+var snowtype=new Array("Arial Narrow","Times","Comic Sans MS")
+var snowletter="."
+var sinkspeed=0.6
+var snowmaxsize=30
+var snowminsize=10
+var snowingzone=1
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent 
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)  
+var browserok=ie5||ns6||opera
+function randommaker(range) {  
+ rand=Math.floor(range*Math.random())
+    return rand
+}
+function initsnow() {
+ if (ie5 || opera) {
+  marginbottom = document.body.clientHeight
+  marginright = document.body.clientWidth
+ }
+ else if (ns6) {
+  marginbottom = window.innerHeight
+  marginright = window.innerWidth
+ }
+ var snowsizerange=snowmaxsize-snowminsize
+ for (i=0;i<=snowmax;i++) {
+  crds[i] = 0;                      
+     lftrght[i] = Math.random()*15;         
+     x_mv[i] = 0.03 + Math.random()/10;
+  snow[i]=document.getElementById("s"+i)
+  snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+  snow[i].size=randommaker(snowsizerange)+snowminsize
+  snow[i].style.fontSize=snow[i].size
+  snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+  snow[i].sink=sinkspeed*snow[i].size/5
+  if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+  if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+  if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+  if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+  snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+  snow[i].style.left=snow[i].posx
+  snow[i].style.top=snow[i].posy
+ }
+ movesnow()
+}
+function movesnow() {
+ for (i=0;i<=snowmax;i++) {
+  crds[i] += x_mv[i];
+  snow[i].posy+=snow[i].sink
+  snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+  snow[i].style.top=snow[i].posy 
+  if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+   if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+   if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+   if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+   if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+   snow[i].posy=0
+  }
+ }
+ var timer=setTimeout("movesnow()",50)
+}
+for (i=0;i<=snowmax;i++) {
+ document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+ window.onload=initsnow
+}
+
+
+	    </script>
+	    <div align=center>
+	    <font color="RED" size="4"><br>Your Way To Hacking</br>
+		<script>
+		
+
+// ********** 
+
+var text="@Mehdi Boullouf" 
+var speed=80 // 
+
+// ********** 
+
+
+if (document.all||document.getElementById){
+document.write('<span id="highlight">' + text + '</span>')
+var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight
+}
+else
+document.write(text)
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
+var r=1
+var g=1
+var b=1
+var seq=1
+function changetext(){
+rainbow="#"+hex[r]+hex[g]+hex[b]
+storetext.style.color=rainbow
+}
+function change(){
+if (seq==6){
+b--
+if (b==0)
+seq=1
+}
+if (seq==5){
+r++
+if (r==12)
+seq=6
+}
+if (seq==4){
+g--
+if (g==0)
+seq=5
+}
+if (seq==3){
+b++
+if (b==12)
+seq=4
+}
+if (seq==2){
+r--
+if (r==0)
+seq=3
+}
+if (seq==1){
+g++
+if (g==12)
+seq=2
+}
+changetext()
+}
+function starteffect(){
+if (document.all||document.getElementById)
+flash=setInterval("change()",speed)
+}
+starteffect()
+</script>
+
